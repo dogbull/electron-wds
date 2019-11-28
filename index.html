@@ -3,17 +3,69 @@
   <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <title>주산지상세기상정보-제주(마늘)</title>
+    <link rel="stylesheet" href="./myapp/lib/bootstrap-4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./myapp/lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.standalone.min.css">
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script src="./myapp/lib/jquery-3.4.1/js/jquery-3.4.1.min.js"></script>
+    <script src="./myapp/lib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+    <script src="./myapp/lib/bootstrap-datepicker-1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="./myapp/lib/bootstrap-datepicker-1.9.0/js/bootstrap-datepicker.ko.min.js"></script>
+    <script src="./myapp/lib/moment-2.24.0/js/moment.min.js"></script>
+    <link rel="stylesheet" href="./myapp/index.css">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <h1>주산지상세기상정보-제주(마늘)</h1>
+    <div class="contents">
+        <div class="card">
+          <div class="header">
+              <h2>경위도:</h2>
+          </div>
+          <div class="contents">
+              <textarea id="points" placeholder="경위도를 입력하세요.
+ex)
+126.501,33.371
+126.502,33.372
+126.503,33.373
+" cols="64" rows="5"></textarea>
+          </div>
+        </div>
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+        <div class="card">
+          <div class="header">
+              <h2>기간:</h2>
+          </div>
+          <div class="contents">
+              <div>
+                  <div class="mb5">
+                    시작일:
+                    <input type="text" class="form-control datepicker" id="startDate">
+                  </div>
+                  <div class="mb5">
+                    종료일:
+                    <input type="text" class="form-control datepicker" id="endDate">
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div>
+          <button class="btn btn-lg btn-success" id="btnDownload">자료 받기</button>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="desc">
+            https://wds.agmet.kr
+        </div>
+      </div>
+        <div id="version">
+            We are using Node.js <span id="node-version"></span>,
+            Chromium <span id="chrome-version"></span>,
+            and Electron <span id="electron-version"></span>.
+        </div>
+        <!-- You can also require other files to run in this process -->
+        <script src="./renderer.js"></script>
+    </div>
+    <script src="./myapp/index.js"></script>
   </body>
 </html>

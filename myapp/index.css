@@ -1,0 +1,59 @@
+h1 {
+    padding: 15px;
+    margin: 0;
+    background-color: rgb(228, 189, 82);
+    color: #FFF;
+    font-size: 20px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+div.contents {
+    padding: 10px;
+    font-size: 14px;
+}
+
+div.footer {
+    border-top: 1px solid #eee;
+}
+div.footer > div.desc{
+    padding: 5px;
+    font-size: 12px;
+    color: #888;
+}
+
+div.card {
+    border: 1px solid #EEE;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+div.card .header {
+    border-bottom: 1px solid #eee;
+    padding: 5px;
+    background-color: #EEE;
+}
+
+div.card .contents {
+    padding: 5px;
+}
+
+div.card .contents > textarea {
+    width: 100%;
+}
+
+.mb5 {
+    margin-bottom: 5px;
+}
+
+#version {
+    display: none;
+}
