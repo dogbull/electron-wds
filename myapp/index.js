@@ -12,7 +12,7 @@ $('.datepicker').datepicker({
 }).datepicker("setDate", new Date());
 
 $('#btnDownload').click(async function(e){
-    let region_eng = 'jeju';
+    let region_eng = 'taebaek';
     let begin = moment($('#startDate').val()).format('YYYYMMDD');
     let end = moment($('#endDate').val()).format('YYYYMMDD');
     let points = {};
